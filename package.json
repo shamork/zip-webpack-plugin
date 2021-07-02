@@ -1,14 +1,14 @@
 {
-  "name": "zip-webpack-plugin",
-  "version": "4.0.1",
-  "description": "Webpack plugin to zip up emitted files.",
+  "name": "zip-dir-webpack-plugin",
+  "version": "4.1.2",
+  "description": "Webpack plugin to zip up emitted files or files in specified dir.",
   "main": "index.js",
   "scripts": {
-    "test": "ava test/test.js"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erikdesjardins/zip-webpack-plugin.git"
+    "url": "git+https://github.com/shamork/zip-webpack-plugin.git"
   },
   "keywords": [
     "webpack"
@@ -16,9 +16,9 @@
   "author": "Erik Desjardins",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/erikdesjardins/zip-webpack-plugin/issues"
+    "url": "https://github.com/shamork/zip-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/erikdesjardins/zip-webpack-plugin#readme",
+  "homepage": "https://github.com/shamork/zip-webpack-plugin#readme",
   "dependencies": {
     "yazl": "^2.5.1"
   },

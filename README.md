@@ -8,18 +8,18 @@ Compresses all assets into a zip file.
 
 For Webpack 4 / 5:
 
-`npm install --save-dev zip-webpack-plugin`
+`npm install --save-dev zip-dir-webpack-plugin`
 
 For Webpack 3:
 
-`npm install --save-dev zip-webpack-plugin@2.0.0`
+`npm install --save-dev zip-dir-webpack-plugin@2.0.0`
 
 ## Usage
 
 **webpack.config.js**
 
 ```js
-var ZipPlugin = require('zip-webpack-plugin');
+var ZipPlugin = require('zip-dir-webpack-plugin');
 
 module.exports = {
   // ...
@@ -29,6 +29,12 @@ module.exports = {
   },
   plugins: [
     new ZipPlugin({
+      //for webpack 4.x, hook afterEmit
+
+      // OPTIONAL: defaults undefined
+      // if set, include files from this dir,otherwise from compliation.assets
+      fromDir: './build',
+
       // OPTIONAL: defaults to the Webpack output path (above)
       // can be relative (to Webpack output path) or absolute
       path: 'zip',
@@ -61,7 +67,7 @@ module.exports = {
       // OPTIONAL: defaults to excluding nothing
       // can be a string, a RegExp, or an array of strings and RegExps
       // if a file matches both include and exclude, exclude takes precedence
-      exclude: [/\.png$/, /\.html$/],
+      exclude: [/asset\-manifest\.json$/],
 
       // yazl Options
 
